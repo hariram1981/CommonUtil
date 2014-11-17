@@ -9,11 +9,21 @@ buildscript {
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'idea'
+apply plugin: 'maven'
+
+uploadArchives {
+	repositories.mavenDeployer {
+		repository (url: "file:///home/hariram/Personal/github/maven-repo-snapshot")
+		pom.artifactId = 'commonutil'
+		pom.groupId = 'com.hariram'
+		pom.version = '0.2'
+	}
+}
 
 sourceCompatibility = '1.8'
 jar {
     baseName = 'commonutil'
-    version =  '0.1'
+    version =  '0.2'
 }
 
 repositories {
@@ -29,4 +39,9 @@ dependencies {
 
 task wrapper(type: Wrapper) {
     gradleVersion = '1.12'
+}
+
+task generateJavadoc(type: Javadoc){
+	source = sourceSets.main.allJava
+	destinationDir = reporting.file("commonutil")
 }
