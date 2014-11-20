@@ -16,14 +16,14 @@ uploadArchives {
 		repository (url: "file:///home/hariram/Personal/github/maven-repo-snapshot")
 		pom.artifactId = 'commonutil'
 		pom.groupId = 'com.hariram'
-		pom.version = '0.2'
+		pom.version = '0.3'
 	}
 }
 
 sourceCompatibility = '1.8'
 jar {
     baseName = 'commonutil'
-    version =  '0.2'
+    version =  '0.3'
 }
 
 repositories {

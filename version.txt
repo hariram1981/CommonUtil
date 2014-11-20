@@ -3,3 +3,4 @@
 0.2 - added getProperties - get map of key-value from in a particular path
     - added getProperty - get value for a particular key from bundle in a particular path
     - added getBundle - get bundle in a particular path
+0.3 - Fixing issue with split of filename

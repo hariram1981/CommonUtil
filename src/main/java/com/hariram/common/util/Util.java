@@ -112,7 +112,7 @@ public final class Util {
 		LOGGER.info("Util.getBundle, filePath: " + filePath + ", fileName: " + fileName);
 		if(!Objects.isNull(fileName)) {
 			if(fileName.contains(".properties")) {
-				fileName = fileName.split(".")[0];
+				fileName = fileName.split(".properties")[0];
 			}
 		}
 		

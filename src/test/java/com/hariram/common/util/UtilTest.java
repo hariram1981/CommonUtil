@@ -29,7 +29,12 @@ public class UtilTest {
 		filePath = "/opt/ad2";
 		fileName = "avfw";
 		key = "restservice.url";
-	}
+/*		filePath = "/home/hariram/Personal/github/PropertyAnnotation/src/main/resources/";
+		fileName = "log4j.properties";
+		key = "log4j.rootLogger";
+		System.out.println(fileName.split("."));
+		System.out.println(fileName.split(".properties")[0]);
+*/	}
 	
 	@After
 	public void teardown() throws Exception {
