@@ -17,10 +17,15 @@ import org.junit.Test;
  *
  */
 public class UtilTest {
-	
+	//For property file
 	private String filePath;
 	private String fileName;
 	private String key;
+	//For dynamically invoking method of class
+	private String jarPath;
+	private String className;
+	private String methodName;
+	private Object[] methodArgs;
 	
 	enum TYPES {A, B, C, D};
 	
@@ -34,7 +39,12 @@ public class UtilTest {
 		key = "log4j.rootLogger";
 		System.out.println(fileName.split("."));
 		System.out.println(fileName.split(".properties")[0]);
-*/	}
+*/	
+		jarPath = "/home/hariram/git/avfw_10Oct2014/AD2DBReport/build/libs/ad2dbreport-0.5.jar";
+		className = "edu.am.iotm.ad2.report.db.MyClass";
+		methodName = "get";
+		methodArgs = new Object[]{};
+	}
 	
 	@After
 	public void teardown() throws Exception {
@@ -56,5 +66,12 @@ public class UtilTest {
 	public void getProperties() {
 		Map<String, String> propertiesMap = Util.getProperties(filePath, fileName);
 		assertTrue(propertiesMap != null && propertiesMap.size() > 0);
+	}
+	
+	@Test
+	public void invokeMethodOfClassInJar() {
+		Object returnObj = Util.invokeMethodOfClassInJar(jarPath, className, methodName, methodArgs);
+		
+		assertTrue(returnObj != null);
 	}
 }

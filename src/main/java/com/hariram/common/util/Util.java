@@ -1,6 +1,8 @@
 package com.hariram.common.util;
 
 import java.io.File;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLClassLoader;
@@ -131,5 +133,31 @@ public final class Util {
 		}
 		LOGGER.info("Util.getBundle, bundle: " + bundle);
 		return bundle;
+	}
+	/**
+	 * Invoke method in a class in a jar file.
+	 * 
+	 * @param jarPath full path of the jar file
+	 * @param className full qualified name of the class
+	 * @param methodName method to be invoked in the class
+	 * @param methodArgs arguments for the method to be invoked in the class
+	 * @return Object returned by method invocation
+	 */
+	public static Object invokeMethodOfClassInJar(String jarPath, String className, String methodName, Object[] methodArgs) {
+		LOGGER.info("Util.invokeMethodOfClassInJar, jarPath: " + jarPath + ", className: " + methodName + ", methodArgs: " + methodArgs);
+		Object returnObj = null;
+		try {
+			File file = new File(jarPath);
+			URL[] urls = {file.toURI().toURL()};
+			ClassLoader loader = new URLClassLoader(urls);
+			Class<? extends Object> thisClass = Class.forName(className, true, loader);
+			Method method = thisClass.getMethod(methodName, new Class[]{});
+			Object thisClassObj = thisClass.newInstance();
+			returnObj = method.invoke(thisClassObj, methodArgs);
+ 		} catch (InvocationTargetException | IllegalArgumentException | IllegalAccessException | InstantiationException | SecurityException | NoSuchMethodException | ClassNotFoundException | MalformedURLException e) {
+			LOGGER.error("Util.invokeMethodOfClassInJar exception, message : " + e.getClass() + " " + e.getMessage());
+ 		}
+		LOGGER.info("Util.invokeMethodOfClassInJar, returnObj: " + returnObj);
+		return returnObj;
 	}
 }
