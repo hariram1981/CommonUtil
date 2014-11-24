@@ -10,10 +10,10 @@ Common utility functions
 
 Classes
 ----------
-com.hariram.common.util.Util
+#com.hariram.common.util.Util
  - Utility class for common functionalities.
  
-Static methods in the class are as below:
+##Static methods in the class are as below:
 
 1. List<String> enumToList(List<Object> enumList)
  - Converts List<Object> in an enum to List<String.
