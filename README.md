@@ -10,7 +10,7 @@ Common utility functions
 
 Classes
 ----------
-###com.hariram.common.util.Util
+###1. com.hariram.common.util.Util
  - Utility class for common functionalities.
  
 ####Static methods in the class are as below:
