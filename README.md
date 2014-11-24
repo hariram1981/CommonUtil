@@ -11,24 +11,24 @@ Common utility functions
 Classes
 ----------
 ###1. com.hariram.common.util.Util
- - Utility class for common functionalities.
+  - Utility class for common functionalities.
  
 ####Static methods in the class are as below:
 
 1. List<String> enumToList(List<Object> enumList)
- - Converts List<Object> in an enum to List<String.
+  - Converts List<Object> in an enum to List<String.
  
 2. ResourceBundle getBundle(String filePath, String fileName)
- - Converts List<Object> in an enum to List<String.
+  - Converts List<Object> in an enum to List<String.
  
 3. Map<String, String> getProperties(String filePath, String fileName)
- - Fetches map of all key-values from a property file at filePath and with fileName.
+  - Fetches map of all key-values from a property file at filePath and with fileName.
  
 4. String getProperty(String filePath, String fileName, String key)
- - Fetches value of the key from a property file at filePath with fileName.
+  - Fetches value of the key from a property file at filePath with fileName.
 
 5. Object invokeMethodOfClassInJar(String jarPath, String className, String methodName, Object[] methodArgs)
- - invoke methodName of ClassName in jar in jarPath and with methodArgs.
+  - invoke methodName of ClassName in jar in jarPath and with methodArgs.
 
 License
 ==========
