@@ -29,6 +29,26 @@ Classes
 
 5. Object invokeMethodOfClassInJar(String jarPath, String className, String methodName, Object[] methodArgs)
   - invoke methodName of ClassName in jar in jarPath and with methodArgs.
+  
+Usage
+----------
+- Usage can be checked in the JUnit test case that has been written for it but below are samples:
+
+1. enum TYPES {A, B, C, D} 
+List<String> list = Util.enumToList(Arrays.asList(TYPES.values()));
+   //Converts the enum to list of string
+
+2. ResourceBundle bundle = Util.getBundle("/opt/","log4j"); 
+   //Fetches log4j.properties from /opt.
+   
+3. Map<String, String> propertiesMap = Util.getProperties("/opt","log4j");
+   //Loads all the key-values in /opt/log4j.properties to propertiesMap
+
+4. String propertyValue = Util.getProperty("/opt", "log4j", "log4j.rootLogger");
+   //Gets the value of the key log4j.rootLogger from /opt/log4j.properties
+   
+5. Object obj = Util.invokeMethodOfClassInJar("/opt/myjar.jar","com.test.MyClass","mymethod", null);
+   //Invokes com.test.MyClass.mymethod() from /opt/myjar.jar
 
 License
 ==========
