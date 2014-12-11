@@ -5,3 +5,4 @@
     - added getBundle - get bundle in a particular path
 0.3 - Fixing issue with split of filename
 0.4 - Added method for invoking method of a class in a jar file
+1.0 - First release version
