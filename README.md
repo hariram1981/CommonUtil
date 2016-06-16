@@ -28,16 +28,13 @@ Classes
   - Fetches value of the key from a pr###1. com.hariram.common.util.Util
   - Utility class for common functionalities.
  
-####Static methods in the class are as below:
-  Property file at filePath with fileName.
-
 5. Object invokeMethodOfClassInJar(String jarPath, String className, String methodName, Object[] methodArgs)
   - invoke methodName of ClassName in jar in jarPath and with methodArgs.
 
 Interfaces
 ----------
    
-###1. com.hariram.common.util.DynamicToString
+###2. com.hariram.common.util.DynamicToString
  - Class overriding toString method and dynamically lists the values of variables.
  
 ####Methods in the class are as below:
