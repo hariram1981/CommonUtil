@@ -10,16 +10,16 @@ Common utility functions
 
 Classes
 ----------
-###1. com.hariram.common.util.Util
+###com.hariram.common.util.Util
   - Utility class for common functionalities.
  
 ####Static methods in the class are as below:
 
 1. List<String> enumToList(List<Object> enumList)
-  - Converts List<Object> in an enum to List<String.
+  - Converts List of Object in an enum to List of String.
  
 2. ResourceBundle getBundle(String filePath, String fileName)
-  - Converts List<Object> in an enum to List<String.
+  - Converts List of Object in an enum to List of String.
  
 3. Map<String, String> getProperties(String filePath, String fileName)
   - Fetches map of all key-values from a property file at filePath and with fileName.
@@ -34,8 +34,8 @@ Classes
 Interfaces
 ----------
    
-###2. com.hariram.common.util.DynamicToString
- - Class overriding toString method and dynamically lists the values of variables.
+###com.hariram.common.util.DynamicToString
+ - Class overriding toString method and dynamically listing the values of variables.
  
 ####Methods in the class are as below:
 
