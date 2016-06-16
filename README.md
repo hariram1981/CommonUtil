@@ -25,11 +25,26 @@ Classes
   - Fetches map of all key-values from a property file at filePath and with fileName.
  
 4. String getProperty(String filePath, String fileName, String key)
-  - Fetches value of the key from a property file at filePath with fileName.
+  - Fetches value of the key from a pr###1. com.hariram.common.util.Util
+  - Utility class for common functionalities.
+ 
+####Static methods in the class are as below:
+  Property file at filePath with fileName.
 
 5. Object invokeMethodOfClassInJar(String jarPath, String className, String methodName, Object[] methodArgs)
   - invoke methodName of ClassName in jar in jarPath and with methodArgs.
-  
+
+Interfaces
+----------
+   
+###1. com.hariram.common.util.DynamicToString
+ - Class overriding toString method and dynamically lists the values of variables.
+ 
+####Methods in the class are as below:
+
+1. String printString()
+  - Lists the variables and values of the implementing class
+   
 Usage
 ----------
 - Usage can be checked in the JUnit test case that has been written for it but below are samples:
